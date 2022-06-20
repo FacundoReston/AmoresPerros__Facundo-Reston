@@ -29,7 +29,7 @@ body{
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
-    background-color: pink;
+    background: linear-gradient(0.25turn, #adadad, pink, #adadad);
     margin-top: 30px;
 }
 
@@ -64,7 +64,7 @@ body{
 }
 
 .titulo h1{
-    background-color: pink;
+    background: radial-gradient(pink, #adadad);
     padding: 20px;
     border: 3px solid rgb(255, 93, 120); 
 }
@@ -81,6 +81,22 @@ body{
 .subtitulo{
     font-size: xx-large;
     color: rgb(255, 93, 120);
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-name: subtitulo;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes subtitulo{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
 }
 
 .texto{
@@ -97,6 +113,7 @@ body{
     height: 220px;
     margin-left: auto;
     margin-right: auto;
+    transform: rotate(2deg);
 }
 
 .tituloLista{

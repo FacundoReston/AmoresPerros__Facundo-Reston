@@ -31,7 +31,7 @@ body{
     grid-column-start: 1;
     grid-column-end: 6;
     text-align: center;
-    background-color: pink;
+    background: linear-gradient(0.25turn, #adadad, pink, #adadad);
     margin-top: 30px;
 }
 
@@ -68,7 +68,8 @@ body{
 }
 
 .titulo h1{
-    background-color: pink;
+    background: radial-gradient(pink, #adadad);
+    border: 3px solid rgb(255, 93, 120);
     padding: 15px;
 }
 
@@ -90,6 +91,7 @@ body{
     height: 50px;
     border-radius: 50%;
     background-color: rgb(0, 54, 102);
+    transform: translateX(-80px);
 }
 
 .preguntas .enviar a{
@@ -99,6 +101,10 @@ body{
 
 .preguntas .enviar a:hover{
     color: rgb(255, 93, 120);
+}
+
+.preguntas textarea{
+    transform: translateX(-50px);
 }
 
 .bot-menu{
@@ -191,6 +197,13 @@ body{
     }
     .preguntas{
         grid-row: 4 / 5;
+        transform: translateX(20px);
+    }
+    .preguntas .enviar{
+        transform: translateX(-30px);
+    }
+    .preguntas label{
+        transform: translateX(-20px);
     }
     .bot-menu{
         grid-row: 5 / 6;
@@ -200,6 +213,7 @@ body{
     .ayuda{
         grid-row: 5 / 6;
         grid-column: 4 / 6;
+        transform: translate(-30px, 15px)
     }
     .redesSociales{
         grid-row: 6 / 7;
