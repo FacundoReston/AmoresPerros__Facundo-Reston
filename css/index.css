@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url(./img/plantillapuntitos.jpg);
+    background-image: url(/./img/plantillapuntitos.jpg);
 
 }
 
@@ -314,6 +314,7 @@ body{
         grid-column: 3 / 4;
         justify-content: left;
         align-items: left;
+        transform: translateX(-30px);
     }
     .redesSociales{
         grid-row: 8 / 9;

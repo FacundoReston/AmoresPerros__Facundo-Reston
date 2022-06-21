@@ -3,7 +3,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 body{
-    background-image: url(./img/plantillapuntitos.jpg);
+    background-image: url(/./img/plantillapuntitos.jpg);
 }
 
 .contenedor{
@@ -212,6 +212,9 @@ body{
 
 @media screen and (max-width: 768px) {
     
+    .contenedor{
+        width: 100%;
+    }
     .logo{
         grid-row: 1 / 2;
     }
@@ -247,6 +250,7 @@ body{
         grid-column: 3 / 4;
         justify-content: left;
         align-items: left;
+        transform: translateX(-20px);
     }
     .redesSociales{
         grid-row: 9 / 10;

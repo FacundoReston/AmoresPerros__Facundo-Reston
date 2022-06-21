@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url(./img/plantillapuntitos.jpg);
+    background-image: url(/./img/plantillapuntitos.jpg);
 }
 
 .contenedor{
@@ -212,6 +212,7 @@ body{
     .titulo{
         grid-row: 3 / 4;
         grid-column: 2 / 3;
+        text-align: center;
     }
     .email{
         grid-row: 4 / 5;
@@ -236,6 +237,7 @@ body{
     .ayuda{
         grid-row: 8 / 9;
         grid-column: 3 / 4;
+        transform: translateX(-50px);
     }
     .redesSociales{
         grid-row: 9 / 10;
