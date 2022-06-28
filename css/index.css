@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body{
@@ -12,17 +12,12 @@ body{
     display: grid;
     grid-gap: 15px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto auto 100px;
+    grid-template-rows: auto auto auto auto 100px auto;
     width: 100%;
 }
 
 .logo{
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    text-align: center;
-    margin-top: 20px;
+    grid-column: 2 / 3;
 }
 
 .header{
@@ -31,8 +26,19 @@ body{
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
-    background: linear-gradient(0.25turn, #adadad, pink, #adadad);
     margin-top: 30px;
+    padding: 20px;
+    background-color: pink;
+    background: rgb(255,192,203);
+    background: radial-gradient(circle, rgba(255,192,203,1) 0%, rgba(173,173,173,1) 35%);
+}
+
+.btn-group a{
+    font-size: x-large;
+}
+
+.btn-group a:hover{
+    color: rgb(255, 93, 120);
 }
 
 .header header nav ul{
@@ -67,14 +73,15 @@ body{
 
 .pediTurno h2{
     color: #333;
-    background-color: pink;
+    background: rgb(255,192,203);
+    background: linear-gradient(0deg, rgba(255,192,203,1) 0%, rgba(173,173,173,1) 100%);
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     border-radius: 5%;
-    outline: 5px solid rgb(255, 93, 120);
-    outline-offset: 3px;
+    outline: 3px solid rgb(255, 93, 120);
+    outline-offset: 2px;
     font-size: xx-large;
 }
 
@@ -85,7 +92,7 @@ body{
 .clickAqui button{
     height: 100px;
     width: 100px;
-    background-color: pink;
+    background: rgb(255,192,203);
     border-radius: 50%;
     border: none;
     outline: 3px dashed rgb(255, 93, 120);
@@ -110,7 +117,7 @@ body{
     grid-column-end: 4;
     text-align: center;
     animation-name: perrita;
-    animation-duration: 8s;
+    animation-duration: 5s;
     animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -123,17 +130,17 @@ body{
 @keyframes perrita {
     0%{
         opacity: 0.8;
-        outline: 3px dotted rgb(255, 93, 120);
+        outline: 5px dotted rgb(255, 93, 120);
         outline-offset: 3px;
     }
     50%{
         opacity: 1;
-        outline: 3px dotted rgb(121, 0, 20);
+        outline: 5px dotted rgb(121, 0, 20);
         outline-offset: 3px;
     }
     100%{
         opacity: 0.8;
-        outline: 3px dotted rgb(255, 93, 120);
+        outline: 5px dotted rgb(255, 93, 120);
         outline-offset: 3px;
     }
 }
@@ -152,8 +159,11 @@ body{
     margin-left: auto;
     padding: 0 15px 0 15px;
     color: #333;
-    border: rgb(255, 93, 120) groove 3px;
     border-radius: 5%;
+}
+
+.texto h3{
+    margin-top: 15px;
 }
 
 .texto p{
@@ -171,7 +181,7 @@ body{
     height: 355px;
     width: 300px;
     animation-name: ruben;
-    animation-duration: 8s;
+    animation-duration: 5s;
     animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -180,35 +190,34 @@ body{
 @keyframes ruben {
     0%{
         opacity: 0.8;
-        outline: 3px dotted rgb(255, 93, 120);
+        outline: 5px dotted rgb(255, 93, 120);
         outline-offset: 3px;
     }
     50%{
         opacity: 1;
-        outline: 3px dotted rgb(121, 0, 20);
+        outline: 5px dotted rgb(121, 0, 20);
         outline-offset: 3px;
     }
     100%{
         opacity: 0.8;
-        outline: 3px dotted rgb(255, 93, 120);
+        outline: 5px dotted rgb(255, 93, 120);
         outline-offset: 3px;
     }
 }
 
 .ruben img,
 .perrita img{
-    outline: 3px dotted rgb(255, 93, 120);
+    outline: 5px dotted rgb(255, 93, 120);
     outline-offset: 3px;
 }
 
 .bot-menu{
     grid-row-start: 5;
     grid-row-end: 6;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    display: flex;
+    display: grid;
     align-items: flex-end;
     justify-content: center;
+    align-items:flex-end;
 }
 
 .bot-menu ul{
@@ -235,10 +244,9 @@ body{
     grid-row-end: 6;
     grid-column-start: 2;
     grid-column-end: 3;
-    display: flex;
+    display: grid;
     align-items: flex-end;
     justify-content: center;
-    margin-bottom: 10px;
 }
 
 .ayuda button{
@@ -251,6 +259,7 @@ body{
 .ayuda button a{
     text-decoration: none;
     color: white;
+    text-align: center;
 }
 
 .ayuda button a:hover{
@@ -262,9 +271,10 @@ body{
     grid-row-end: 6;
     grid-column-start: 3;
     grid-column-end: 4;
-    display: flex;
-    align-items: flex-end;
+    display: grid;
     justify-content: center;
+    align-items: flex-end;
+    transform: translateY(10px);
 }
 
 .redesSociales a{
@@ -275,7 +285,9 @@ body{
     background-color: rgb(255, 93, 120);
 }
 
-
+.redesSociales .row .col a{
+    display: inline-flex;
+}
 
 @media screen and (max-width: 768px) {
     
