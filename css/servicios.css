@@ -24,7 +24,8 @@ body{
 
 .header{
     text-align: center;
-    background: linear-gradient(0.25turn, #adadad, pink, #adadad);
+    background: rgb(255,192,203);
+    background: radial-gradient(circle, rgba(255,192,203,1) 0%, rgba(173,173,173,1) 35%);
     margin-top: 30px;
     grid-row: 2 / 3;
     grid-column: 1 / 4;
@@ -50,6 +51,14 @@ body{
     color: rgb(255, 93, 120);
 }
 
+.btn-group a{
+    font-size: x-large;
+}
+
+.btn-group a:hover{
+    color: rgb(255, 93, 120);
+}
+
 .titulo{
     grid-row: 3 / 4;
     grid-column: 1 / 4;
@@ -70,11 +79,8 @@ body{
 }
 
 .gif iframe{
-    width: 363px;
-    height: 323px;
-    border: none;
-    outline: solid 3px rgb(255, 93, 120);
-    outline-offset: 3px;
+    width: 371px;
+    height: 331px;
     transform: rotate(358deg);
 }
 
@@ -82,7 +88,7 @@ body{
     grid-row: 5 / 6;
     grid-column: 2 / 4;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: flex-start;
     margin-top: 50px;
     font-size: x-large;
@@ -96,16 +102,15 @@ body{
     grid-row: 5 / 6;
     grid-column: 2 / 4;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     margin-top: 50px;
-    width: 75%;
+    text-align:justify;
 }
 
 .lista ul{
     list-style: none;
-    list-style-type:circle;
-    padding-left: 0;
+
 }
 
 .texto{
