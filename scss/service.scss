@@ -1,28 +1,19 @@
 *{
     box-sizing: border-box;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-body{
-    background-image: url(../img/plantillapuntitos.jpg);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .contenedor{
     display: grid;
     grid-gap: 15px;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto auto auto auto;
     width: 100%;
 }
 
-.logo{
-    text-align: center;
-    margin-top: 20px;
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-}
-
-
+@import "bgLogo";
+@import "header";
+@import "vars";
 
 .titulo{
     grid-row: 3 / 4;
@@ -41,12 +32,11 @@ body{
     align-items: center;
     margin-bottom: 50px;
     margin-top: 30px;
-}
-
-.gif iframe{
-    width: 371px;
-    height: 331px;
-    transform: rotate(358deg);
+    iframe{
+        width: 371px;
+        height: 331px;
+        transform: rotate(358deg);
+    }
 }
 
 .subtitulo{
@@ -57,10 +47,9 @@ body{
     align-items: flex-start;
     margin-top: 50px;
     font-size: x-large;
-}
-
-.subtitulo h4{
-    padding: 10px;
+    h4{
+        padding: 10px;
+    }
 }
 
 .lista{
@@ -71,11 +60,9 @@ body{
     align-items: center;
     margin-top: 50px;
     text-align:justify;
-}
-
-.lista ul{
-    list-style: none;
-
+    ul{
+        list-style: none;
+    }
 }
 
 .texto{
@@ -83,14 +70,12 @@ body{
     grid-column: 2 / 3;
     text-align: center;
     font-style: italic;
-}
-
-.texto p{
-    background: radial-gradient(pink, #adadad);
-    border: solid 1px black;
-    border-radius: 5%;
-    padding: 10px;
-    
+    p{
+        background: radial-gradient(pink, #adadad);
+        border: solid 1px black;
+        border-radius: 5%;
+        padding: 10px;
+    }
 }
 
 .bot-bar{
@@ -99,25 +84,21 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.bot-bar ul{
-    padding-left: 0;
-}
-
-.bot-bar ul li{
-    display: inline;
-}
-
-.bot-bar ul li a{
-    text-decoration: none;
-    color: rgb(0, 54, 102);
-    font-weight: bold;
-    padding: 10px;
-}
-
-.bot-bar ul li a:hover{
-    color: rgb(255, 93, 120);
+    ul{
+        padding-left: 0;
+        li{
+            display: inline;
+            a{
+                text-decoration: none;
+                color: $linkBlue;
+                font-weight: bold;
+                padding: 10px;
+                &:hover{
+                    color: $darkPink;
+                }
+            }
+        }
+    }
 }
 
 .ayuda{
@@ -126,22 +107,19 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.ayuda button{
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    background-color: rgb(0, 54, 102);
-}
-
-.ayuda button a{
-    text-decoration: none;
-    color: white;
-}
-
-.ayuda button a:hover{
-    color: rgb(255, 93, 120);
+    button{
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background-color: $linkBlue;
+        a{
+            text-decoration: none;
+            color: white;
+            &:hover{
+                color: $darkPink;
+            }
+        }
+    }
 }
 
 .redesSociales{
@@ -150,14 +128,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.redesSociales a{
-    padding: 10px;
-}
-
-.redesSociales a:hover{
-    background-color: rgb(255, 93, 120);
+    a{
+        padding: 10px;
+        &:hover{
+            background-color: $darkPink;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -221,6 +197,3 @@ body{
         padding: 30px;
     }
 }
-
-
-
