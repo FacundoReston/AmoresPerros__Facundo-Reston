@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.contenedor{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 100%
+}
+
+@import "vars";
+@import "bgLogo";
+@import "header";
+@import "cont-serv";
+@import "mqueries-serv";
+
+
+.bot-bar{
+    grid-row: 6 / 7;
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(5px);
+    ul{
+        padding-left: 0;
+        li{
+            display: inline;
+            a{
+                text-decoration: none;
+                color: $linkBlue;
+                font-weight: bold;
+                padding: 10px;
+                &:hover{
+                    color: $darkPink;
+                }
+            }
+        }
+    }
+}
+.ayuda{
+    grid-row: 6 / 7;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button{
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background-color: $linkBlue;
+        a{
+            text-decoration: none;
+            color: white;
+            &:hover{
+                color: $darkPink;
+            }
+        }
+    }
+}
+.redesSociales{
+    grid-row: 6 / 7;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        padding: 10px;
+        &:hover{
+            background-color: $darkPink;
+        }
+    }
+}
+
+
